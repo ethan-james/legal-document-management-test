@@ -21,5 +21,14 @@ router.get('/extractions/:documentId', (req: Request, res: Response) => {
   res.json(mockData);
 });
 
+// Add new endpoint for documents
+router.get('/documents', (req: Request, res: Response) => {
+  const mockDocuments = Array.from({ length: 9 }, (_, index) => ({
+    id: `${index}`,
+    filename: null,
+  }));
+  res.json(mockDocuments);
+});
+
 // Export the router
 export default router; 

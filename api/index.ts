@@ -6,7 +6,7 @@ const app = express();
 expressOasGenerator.init(app, {})
 const PORT = process.env.PORT || 3000;
 
-app.use('/', router);
+app.use('/v1', router);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
