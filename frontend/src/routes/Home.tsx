@@ -4,7 +4,7 @@ import { DocumentCard } from '@/components/DocumentCard'
 import type { Document } from '../../../types/document'
 
 export function Home() {
-  const query = useSuspenseQuery<Document[]>({ queryKey: ['documents'], queryFn: () => fetch('http://localhost:3000/v1/documents').then(res => res.json()) })
+  const query = useSuspenseQuery<Document[]>({ queryKey: ['documents'], queryFn: () => fetch(`${import.meta.env.VITE_API_URL}/v1/documents`).then(res => res.json()) })
 
   return (
     <div className='flex flex-col gap-8'>
