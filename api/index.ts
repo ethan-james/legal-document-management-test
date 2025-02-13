@@ -10,4 +10,4 @@ app.use('/v1', router);
 
 app.listen(PORT, () => {
     console.log(`Server is running on http://localhost:${PORT}`);
-}); 
+});
